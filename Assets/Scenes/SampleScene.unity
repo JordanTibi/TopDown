@@ -7920,7 +7920,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1234564332}
   - component: {fileID: 1234564331}
-  - component: {fileID: 1234564330}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -7928,26 +7927,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1234564330
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234564329}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d1639cc5a5665764a91707a35335b26f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &1234564331
 Rigidbody2D:
   serializedVersion: 4
@@ -8032,7 +8011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: 0}
+  m_Actions: {fileID: -944628639613478452, guid: 42675384d8141864080d6b3080f3ae6c, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -8047,7 +8026,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &1839481950
@@ -8062,6 +8041,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7908f789b783a644b82007b77d62869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _move: {fileID: -1265917018971985783, guid: 42675384d8141864080d6b3080f3ae6c, type: 3}
+  _sprint: {fileID: 0}
+  _rb: {fileID: 1234564331}
+  _animator: {fileID: 2055100120}
+  _speed: 4
 --- !u!1 &1973801245
 GameObject:
   m_ObjectHideFlags: 0
