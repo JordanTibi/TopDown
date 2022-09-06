@@ -2,17 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class tmp : MonoBehaviour
+public class Animal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    protected virtual void Crier()
     {
-        
+        Debug.Log("je crie");
     }
 
-    // Update is called once per frame
-    void Update()
+}
+
+class Cheval : Animal
+{
+    protected override void Crier()
     {
-        
+        Debug.Log("JE HENIE");
+    }
+}
+
+class Chien : Animal
+{
+    protected override void Crier()
+    {
+        Debug.Log("J'ABOIS");
+    }
+}
+
+class Canard : Animal
+{
+    protected override void Crier()
+    {
+        Debug.Log("je coincointe");
     }
 }

@@ -24,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
         _move.action.performed += UpdateMove;
         _move.action.canceled += StopMove;
 
-        //_sprint.action.started += StartSprint;
-        //_sprint.action.canceled += StopSprint;
+        _sprint.action.started += StartSprint;
+        _sprint.action.canceled += StopSprint;
     }
 
     private void StopSprint(InputAction.CallbackContext obj)
@@ -50,14 +50,14 @@ public class PlayerMovement : MonoBehaviour
         _rb.MovePosition(_rb.transform.position + (_direction * Time.fixedDeltaTime * _speed));
 
 
-        //if (_isRunning)
-        //{
-        //    _rb.MovePosition(_rb.transform.position + (_direction * Time.fixedDeltaTime * _speed * 2));
-        //}
-        //else
-        //{
-        //    _rb.MovePosition(_rb.transform.position + (_direction * Time.fixedDeltaTime * _speed));
-        //}
+        if (_isRunning)
+        {
+            _rb.MovePosition(_rb.transform.position + (_direction * Time.fixedDeltaTime * _speed * 2));
+        }
+        else
+        {
+            _rb.MovePosition(_rb.transform.position + (_direction * Time.fixedDeltaTime * _speed));
+        }
 
     }
 
@@ -77,4 +77,6 @@ public class PlayerMovement : MonoBehaviour
         _direction = obj.ReadValue<Vector2>();
         _aimDirection = _direction;
     }
+
+
 }
